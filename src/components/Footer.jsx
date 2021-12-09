@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import "./Footer.css";
 
 // Pentru Home, About si majoritatea paginilor ce vor fi create in urmatoarele cursuri, avem nevoie de un header
 // si un footer.  Momentan, vom vrea ca footer-ul sa contina link catre pagin de About.
 function Footer() {
     return(
-        <div className="container d-flex justify-content-between bg-light">
+        <div className="container d-flex justify-content-between bg-light footer-main flex-direction-column">
             <div className="p-3">
                 <p>Ghidul marimilor</p>
                 <p>Cum cumpar?</p>

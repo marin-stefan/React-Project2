@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Category from "./pages/Category";
 import Cart from "./pages/Cart";
 import Favorites from "./pages/Favorites";
+import Product from "./pages/Product";
 import Page404 from "./pages/Page404";
 // import withFirebaseAuth from "react-with-firebase-auth";
 // import * as firebase from "firebase/app";
@@ -39,6 +40,7 @@ class App extends React.Component {
           <Route path="/category/:categoryName" component={Category} />
           <Route path="/cart" component={Cart} />
           <Route path="/favorites" component={Favorites} />
+          <Route path="/product/:productId" component={Product} />
           <Route path="*" component={Page404} />
         </Switch>
       </div>

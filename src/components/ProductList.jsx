@@ -8,13 +8,13 @@ function ProductList(props) {
     <div className="container-fluid">
       <div className="row">
         {products
-          ? products.map((product) => (
+          ? products.map((product, index) => (
                 filter
                 ? filter.map((elem)=>{
                   return product.price <=elem[1] && product.price >= elem[0]
                   ?(
                     <ProductItem
-                    key={product.id}
+                    id={product.id}
                     name={product.name}
                     price={product.price}
                     currency={product.currency}

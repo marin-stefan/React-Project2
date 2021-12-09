@@ -11,6 +11,7 @@ function Cart(props) {
         <div className="container container-min-max-width bg-light py-5 my-5">
           <h2>Shopping cart</h2>
           {cartProducts.map((cartProduct, index) => {
+            console.log(index)
             return (
               <div>
                 
