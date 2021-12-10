@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { loginUser } from "../redux/actions/user";
+// import { loginUser } from "../redux/actions/user";
+import { loginUser } from "../../redux/user/UserActions";
 
 class Login extends React.Component {
   componentDidUpdate(prevProps) {

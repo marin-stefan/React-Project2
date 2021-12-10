@@ -1,11 +1,13 @@
-## JavaScript Advanced - Curs 5
+## JavaScript Advanced - Project 2 - e-commerce store
 
-Pentru a rula aceasta etapa (in linie de comanda):
+Requirements were
 
-#### 1. `git clone https://github.com/razvancir96/react-curs05.git`
+#### 1. `git clone the base repository from the course`
 
-#### 2. `cd react-curs05`
+#### 2. `install locally`
 
-#### 3. `npm install` (posibil sa dureze)
+#### 3. `add functionality and `
 
-#### 4. `npm start`
+#### 4. `push final version to git`
+
+#### 5. `deploy final version online `

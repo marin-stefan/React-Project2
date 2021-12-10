@@ -1,5 +1,5 @@
 import React from "react";
-import ProductItem from "./ProductItem";
+import ProductItem from "../ProductItem/ProductItem";
 
 function ProductList(props) {
   const { products, filter } = props;
@@ -10,10 +10,11 @@ function ProductList(props) {
         {products
           ? products.map((product, index) => (
                 filter
-                ? filter.map((elem)=>{
+                ? filter.map((elem,index)=>{
                   return product.price <=elem[1] && product.price >= elem[0]
                   ?(
                     <ProductItem
+                    key = {index}
                     id={product.id}
                     name={product.name}
                     price={product.price}

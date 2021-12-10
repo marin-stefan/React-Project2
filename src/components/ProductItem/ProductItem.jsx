@@ -1,11 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addToCart } from "../redux/actions/cart";
-import { addToFavorites } from "../redux/actions/favorites";
+// import { addToCart } from "../redux/actions/cart";
+import { addToCart } from "../../redux/cart/CartActions" ;
+// import { addToFavorites } from "../redux/actions/favorites";
+import { addToFavorites } from "../../redux/favorites/FavoritesActions";
 import { Link } from "react-router-dom";
 
 function ProductItem(props) {
-    const { name, price, currency, image, addToCartInjected, addToFavoriteInjected, id } = props;
+    const {  name, price, currency, image, addToCartInjected, addToFavoriteInjected, id } = props;
  
     return (
         <div className="col-12 col-md-4 product-item d-flex flex-column align-items-center">
@@ -20,6 +22,7 @@ function ProductItem(props) {
                 onClick={() => {
                     addToCartInjected({
                         product: {
+                           
                             id,
                             name, 
                             price,
@@ -37,6 +40,7 @@ function ProductItem(props) {
                 onClick={() => {
                     addToFavoriteInjected({
                         product: {
+                            
                             name, 
                             price,
                             currency,

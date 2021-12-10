@@ -1,3 +1,4 @@
+import { ADD_TO_CART, REMOVE_FROM_CART } from "./CartConstants";
 
 const initialState ={
     products : []
@@ -7,14 +8,14 @@ const initialState ={
 // nu trebuie sa modifice state-ul primit ca parametru si trebuie sa facem deep copy pe care prelucram si apoi returnam
 function cartReducer(state=initialState, action ){
     switch(action.type){
-        case 'ADD_TO_CART':
+        case ADD_TO_CART:
             const newState = {
                 ...state,
                 products:[...state.products, action.payload.product]
             }
 
             return newState;
-        case 'REMOVE_FROM_CART':
+        case REMOVE_FROM_CART:
             let indextoDelete = action.payload.product.index
             let updatedState = {
                 ...state,
