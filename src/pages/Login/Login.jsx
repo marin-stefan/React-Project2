@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-// import { loginUser } from "../redux/actions/user";
-import { loginUser } from "../../redux/user/UserActions";
+import { loginUserG, loginUserF } from "../../redux/user/UserActions";
 
 class Login extends React.Component {
   componentDidUpdate(prevProps) {
@@ -12,7 +11,7 @@ class Login extends React.Component {
   }
 
   render() {
-    const { loginUser } = this.props;
+    const { loginUserG, loginUserF } = this.props;
     return (
       <div className="d-flex  justify-content-center align-items-center m-5 p-5">
         <div className=" p-5 shadow-lg border rounded-3 ">
@@ -28,12 +27,25 @@ class Login extends React.Component {
           </div>
           <br />
           <button
-            className="mx-5 my-2 btn btn-light"
-            onClick={() => loginUser()}
+            className="mx-5 my-2 btn btn-light border"
+            onClick={() => loginUserG()}
           >
             Google SignIn
           </button>
           <br />
+          <button
+            className="mx-5 my-2 btn btn-primary"
+            onClick={() => loginUserF()}
+          >
+            Facebook SignIn
+          </button>
+          <br />
+
+
+
+
+
+
           {/* <button
             className="mx-5 my-2 btn btn-light"
             onClick={() => handleButtonClick("fcb")}
@@ -82,9 +94,12 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    loginUser: () => {
-      dispatch(loginUser());
+    loginUserG: () => {
+      dispatch(loginUserG());
     },
+    loginUserF: () => {
+      dispatch(loginUserF())
+    }
   };
 }
 

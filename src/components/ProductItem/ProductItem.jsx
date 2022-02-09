@@ -1,28 +1,26 @@
 import React from "react";
 import { connect } from "react-redux";
-// import { addToCart } from "../redux/actions/cart";
 import { addToCart } from "../../redux/cart/CartActions" ;
-// import { addToFavorites } from "../redux/actions/favorites";
 import { addToFavorites } from "../../redux/favorites/FavoritesActions";
 import { Link } from "react-router-dom";
 
 function ProductItem(props) {
-    const {  name, price, currency, image, addToCartInjected, addToFavoriteInjected, id } = props;
+    const {  name, price, currency, image, addToCartInjected, addToFavoriteInjected, id  } = props;
  
     return (
         <div className="col-12 col-md-4 product-item d-flex flex-column align-items-center">
             <Link to={`/product/${id}`}>
             <img src={image} alt="Product" className="w-100 mb-2" />
+            </Link>
             <p className="text-center mb-1">{name}</p>
             <p className="text-center">{price } {currency}</p>
-            </Link>
 
             <button 
                 className="btn btn-outline-dark" 
                 onClick={() => {
                     addToCartInjected({
                         product: {
-                           
+                            
                             id,
                             name, 
                             price,
@@ -32,7 +30,7 @@ function ProductItem(props) {
                     })
                 }}
             >
-                Adauga in cos
+                Add to cart
             </button>
            
             <button 
@@ -40,7 +38,7 @@ function ProductItem(props) {
                 onClick={() => {
                     addToFavoriteInjected({
                         product: {
-                            
+                            id,
                             name, 
                             price,
                             currency,
@@ -49,7 +47,7 @@ function ProductItem(props) {
                     })
                 }}
             >
-                Adauga la favorite
+                Add to favorites
             </button>
         </div>
     )

@@ -16,37 +16,22 @@ function Favorites(props) {
             return (
               <div>
                 <div className="d-flex border m-3">
+                  <img src={favoriteProduct.image} alt="Product" className="thumbnail-image" />
                   <p className="w-50">{favoriteProduct.name}</p>
+                  {/* <p>{index}</p>
+                  <p>/</p> */}
                   <p className="w-50">
                     {favoriteProduct.price} {favoriteProduct.currency}
                   </p>
 
-                  <button
-                    className="btn btn-dark mx-3"
-                    onClick={() => {
-                      addToCartInjected({
-                        product: {
-                          id: favoriteProduct.id,
-                          name: favoriteProduct.name,
-                          price: favoriteProduct.price,
-                          currency: favoriteProduct.currency,
-                        },
-                      });
-                      removeFromFavoritesInjected({
-                        product: {
-                          index,
-                        },
-                      });
-                    }}
-                  >
-                    Muta in cos
-                  </button>
+            
                   <button
                     className="btn btn-dark mx-3"
                     onClick={() =>
                       addToCartInjected({
                         product: {
                           id: favoriteProduct.id,
+                          image: favoriteProduct.image,
                           name: favoriteProduct.name,
                           price: favoriteProduct.price,
                           currency: favoriteProduct.currency,
@@ -54,7 +39,7 @@ function Favorites(props) {
                       })
                     }
                   >
-                    Adauga in cos
+                    Add to cart
                   </button>
 
                   <button

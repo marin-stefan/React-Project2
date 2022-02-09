@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
 import HomeCategory from "../../components/HomeCategory/HomeCategory";
-import products from "../../utils/products.json";
+import products from "../../utils/productsimgbb.json";
 
 class Home extends React.Component {
   constructor() {

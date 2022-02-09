@@ -1,6 +1,4 @@
-import { START_LOADING } from "./UserConstants"
-import { UPDATE_USER_DATA } from "./UserConstants"
-import { UPDATE_ERROR } from "./UserConstants"
+import { START_LOADING, UPDATE_USER_DATA, UPDATE_ERROR } from "./UserConstants"
 
 const initialState = {
     date: null,

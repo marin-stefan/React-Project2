@@ -1,5 +1,4 @@
-import { ADD_TO_FAVORITES } from "./FavoritesConstants"
-import { REMOVE_FROM_FAVORITES } from "./FavoritesConstants"
+import { ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES } from "./FavoritesConstants"
 
 export function addToFavorites(payload) {
     return {

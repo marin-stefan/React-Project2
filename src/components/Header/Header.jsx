@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo3.png";
 import "./Header.css";
 import { ReactComponent as ShoppingCart } from "../../assets/icons/shopping-cart.svg";
 import { ReactComponent as FavoritesTab } from "../../assets/icons/favorite_black.svg";
 import { connect } from "react-redux";
-// import { logOutUser } from "../redux/actions/user";
 import { logOutUser } from "../../redux/user/UserActions";
 
 function Header(props) {
@@ -18,24 +17,24 @@ function Header(props) {
           <img src={logo} alt="The 90's Shop" className="logo" />
         </Link>
         <div>
-          {user ? <p>Salut, {user.displayName}!</p> : null}
+          {user ? <p>Hello, {user.displayName}!</p> : null}
 
-          <div className="d-flex justify-content-end">
-            <Link to="/favorites" className="mx-5 d-flex">
-              <FavoritesTab className="ml-2" />
+          <div className="d-flex justify-content-end bg-light border m-3 px-4 py-2 rounded">
+            <Link to="/favorites" className="mx-2 d-flex">
+              <FavoritesTab className="" />
               <p className="mx-1 mb-0">{numberOfFavorites}</p>
             </Link>
             {user ? (
               <p className="logout h5" onClick={() => logout()}>
-                Delogare
+                Logout
               </p>
             ) : (
-              <Link to="/login" className="h5 mb-0">
-                Logare
+              <Link to="/login" className="h5 mb-0 mx-2">
+                Login
               </Link>
             )}
             <div className="d-flex align-items-center">
-              <Link to="/cart" className="d-flex">
+              <Link to="/cart" className=" mx-2 d-flex">
                 <ShoppingCart className="mx-1" />
                 <p className="mb-0">{numberOfProducts}</p>
               </Link>

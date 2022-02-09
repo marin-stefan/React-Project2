@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Layout from "../../components/Layout/Layout";
 import ProductList from "../../components/ProductList/ProductList";
 import BaseListSideBar from "../../components/BaseListSideBar/BaseListSideBar";
-import products from "../../utils/products.json";
+import products from "../../utils/productsimgbb.json";
 
 class Category extends Component {
   constructor(props) {

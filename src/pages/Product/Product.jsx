@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Layout from "../../components/Layout/Layout";
 
-import products from "../../utils/products.json";
+import products from "../../utils/productsimgbb.json";
 import { connect } from "react-redux";
 import { addToCart } from "../../redux/cart/CartActions";
 import { addToFavorites } from "../../redux/favorites/FavoritesActions";
-import "../../pages/Product/Product.css"
+import "../../pages/Product/Product.css";
 
 class Product extends Component {
   constructor() {
@@ -16,9 +16,7 @@ class Product extends Component {
   }
   componentDidMount() {
     const productIdUrl = this.props.match.params.productId;
-
     const categoryValues = Object.values(products);
-
     let currentProduct;
     categoryValues.forEach((category) => {
       const findResult = category.items.find((item) => {
@@ -32,45 +30,100 @@ class Product extends Component {
     this.setState({ product: currentProduct });
   }
 
+  updateMainImage(image) {
+    let updatedProduct = { ...this.state.product };
+    updatedProduct.imageMain = image;
+    this.setState({ product: updatedProduct });
+  }
+
   render() {
-    const { name, image, id, price, currency, size, brand, colour, material, description } = this.state.product;
+    const {
+      name,
+      imageMain,
+      image1,
+      image2,
+      image3,
+      image4,
+      id,
+      price,
+      currency,
+      size,
+      brand,
+      colour,
+      material,
+      description,
+    } = this.state.product;
     const { addToCart, addToFavorite } = this.props;
+
     return (
       <div>
         <Layout>
           <div className="container-fluid container-min-max-width border border-warning bg-light mx-1 rounded-3 shadow-lg">
             <div className="d-flex justify-content-around">
-              <div className="w-25">
-                <img src={image} alt="Product" className="" />
+              <div className="w-100 d-flex">
+                <div className="w-75">
+                  <img src={imageMain} alt="Product" className="" />
+                </div>
+                <div className="w-100 d-flex flex-column">
+                  <img
+                    src={image1}
+                    alt="Product"
+                    className="w-25  border"
+                    onClick={() => this.updateMainImage(image1)}
+                  />
+                  <img
+                    src={image2}
+                    alt="Product2"
+                    className="w-25  border"
+                    onClick={() => this.updateMainImage(image2)}
+                  />
+                  <img
+                    src={image3}
+                    alt="Product3"
+                    className="w-25 h-25 border"
+                    onClick={() => this.updateMainImage(image3)}
+                  />
+                  <img
+                    src={image4}
+                    alt="Product4"
+                    className="w-25  border"
+                    onClick={() => this.updateMainImage(image4)}
+                  />
+                </div>
               </div>
-              <div className="w-25">
+
+              <div className="w-75">
                 <h2>{name}</h2>
-                <h3>{`Marca : ${brand}`}</h3>
-                <h3>{`Pret : ${price} ${currency}`}</h3>
-                <h3>{`Marime : ${size}`}</h3>
-                <h3>{`Culoare : ${colour}`}</h3>
+                <h3>{`Brand : ${brand}`}</h3>
+                <h3>{`Price : ${price} ${currency}`}</h3>
+                <h3>{`Size : ${size}`}</h3>
+                <h3>{`Color : ${colour}`}</h3>
                 <h3>{`Material : ${material}`}</h3>
-                <h4>{`Descriere : ${description}`}</h4>
+                <h4>{`Description : ${description}`}</h4>
+
                 <button
                   className="btn btn-dark mx-3"
                   onClick={() =>
                     addToCart({
                       product: {
+                        image: image1,
                         id,
                         name,
                         price,
                         currency,
                       },
                     })
+                    
                   }
                 >
-                  Adauga in cos
+                  Add to cart
                 </button>
                 <button
                   className="btn btn-dark mx-3"
                   onClick={() =>
                     addToFavorite({
                       product: {
+                        image: image1,
                         id,
                         name,
                         price,
@@ -79,7 +132,7 @@ class Product extends Component {
                     })
                   }
                 >
-                  Adauga la favorite
+                  Add to favorites
                 </button>
               </div>
             </div>
@@ -92,7 +145,7 @@ class Product extends Component {
 function mapDispatchToProps(dispatch) {
   return {
     addToCart: (payload) => dispatch(addToCart(payload)),
-    addToFavorite: (payload) => dispatch(addToFavorites(payload))
+    addToFavorite: (payload) => dispatch(addToFavorites(payload)),
   };
 }
 
