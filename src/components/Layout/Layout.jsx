@@ -11,7 +11,10 @@ function Layout(props) {
         <Link to="/" className="mx-2 fs-4 text-warning text-decoration-none">
           Home
         </Link>
-        <Link to="/about" className="mx-2 fs-4 text-warning text-decoration-none">
+        <Link
+          to="/about"
+          className="mx-2 fs-4 text-warning text-decoration-none"
+        >
           About
         </Link>
       </div>

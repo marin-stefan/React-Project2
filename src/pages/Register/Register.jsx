@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 function Register() {
   return (
     <div>
-        <div className="bg-light border mx-5 my-5 p-1 shadow-lg border rounded  ">
+      <div className="bg-light border mx-5 my-5 p-1 shadow-lg border rounded  ">
         <Link to="/" className="mx-2 fs-4 text-warning text-decoration-none">
           Home
         </Link>
-        <Link to="/about" className="mx-2 fs-4 text-warning text-decoration-none">
+        <Link
+          to="/about"
+          className="mx-2 fs-4 text-warning text-decoration-none"
+        >
           About
         </Link>
       </div>

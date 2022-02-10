@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import { logOutUser } from "../../redux/user/UserActions";
 
 function Header(props) {
-  const { numberOfProducts,numberOfFavorites, user, logout } = props;
+  const { numberOfProducts, numberOfFavorites, user, logout } = props;
 
   return (
     <header className="border border-danger rounded mb-3 m-1 shadow">
@@ -20,21 +20,33 @@ function Header(props) {
           {user ? <h5>Hello, {user.displayName} !</h5> : null}
 
           <div className="d-flex justify-content-end bg-light border border-warning shadow m-3 px-4 py-2 rounded">
-            <Link to="/favorites" className="mx-2 d-flex text-decoration-none fs-5 pt-2">
-              <FavoritesTab/>
+            <Link
+              to="/favorites"
+              className="mx-2 d-flex text-decoration-none fs-5 pt-2"
+            >
+              <FavoritesTab />
               <p className="mx-1 mb-0 pb-2">{numberOfFavorites}</p>
             </Link>
             {user ? (
-              <p className="logout h5 text-decoration-none pt-2" onClick={() => logout()}>
+              <p
+                className="logout h5 text-decoration-none pt-2"
+                onClick={() => logout()}
+              >
                 Logout
               </p>
             ) : (
-              <Link to="/login" className="h5 mb-0 mx-2 my-2 text-decoration-none">
+              <Link
+                to="/login"
+                className="h5 mb-0 mx-2 my-2 text-decoration-none"
+              >
                 Login
               </Link>
             )}
             <div className="d-flex align-items-center">
-              <Link to="/cart" className="mx-2 d-flex text-decoration-none fs-5 pt-2">
+              <Link
+                to="/cart"
+                className="mx-2 d-flex text-decoration-none fs-5 pt-2"
+              >
                 <ShoppingCart className="mx-1" />
                 <p className="mb-0 pb-2">{numberOfProducts}</p>
               </Link>

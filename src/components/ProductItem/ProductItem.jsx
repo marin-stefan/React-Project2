@@ -30,43 +30,41 @@ function ProductItem(props) {
         {price} {currency}
       </h6>
       <div className="bg-warning p-2 shadow rounded w-100 d-flex justify-content-around">
-        
-          <button
-            className="btn btn-outline-dark border-danger shadow"
-            onClick={() => {
-              addToCartInjected({
-                product: {
-                  id,
-                  name,
-                  price,
-                  currency,
-                  image,
-                  description,
-                },
-              });
-            }}
-          >
-            Add to cart
-          </button>
-        
-          <button
-            className="btn btn-outline-dark border-danger  shadow"
-            onClick={() => {
-              addToFavoriteInjected({
-                product: {
-                  id,
-                  name,
-                  price,
-                  currency,
-                  image,
-                  description,
-                },
-              });
-            }}
-          >
-            Add to favorites
-          </button>
-        
+        <button
+          className="btn btn-outline-dark border-danger shadow"
+          onClick={() => {
+            addToCartInjected({
+              product: {
+                id,
+                name,
+                price,
+                currency,
+                image,
+                description,
+              },
+            });
+          }}
+        >
+          Add to cart
+        </button>
+
+        <button
+          className="btn btn-outline-dark border-danger  shadow"
+          onClick={() => {
+            addToFavoriteInjected({
+              product: {
+                id,
+                name,
+                price,
+                currency,
+                image,
+                description,
+              },
+            });
+          }}
+        >
+          Add to favorites
+        </button>
       </div>
     </div>
   );

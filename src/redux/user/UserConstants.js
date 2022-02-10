@@ -1,7 +1,5 @@
-export const START_LOADING = "START_LOADING"
+export const START_LOADING = "START_LOADING";
 
+export const UPDATE_USER_DATA = "UPDATE_USER_DATA";
 
-export const UPDATE_USER_DATA = "UPDATE_USER_DATA"
-
-
-export const UPDATE_ERROR = "UPDATE_ERROR"
+export const UPDATE_ERROR = "UPDATE_ERROR";

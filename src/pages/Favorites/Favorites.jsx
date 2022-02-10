@@ -5,8 +5,8 @@ import { addToCart } from "../../redux/cart/CartActions";
 import { removeFromFavorites } from "../../redux/favorites/FavoritesActions";
 
 function Favorites(props) {
-  const { favoriteProducts, removeFromFavoritesInjected, addToCartInjected } =
-    props;
+  const { favoriteProducts, removeFromFavoritesInjected, addToCartInjected } = props;
+  
   return (
     <div>
       <Layout>

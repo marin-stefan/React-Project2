@@ -134,11 +134,7 @@ function Cart(props) {
                       <div className="col">
                         <label htmlFor="modal-name">Name: </label>
                         <br />
-                        <input
-                          type="text"
-                          name="modal-name"
-                          id="modal-name"
-                        />
+                        <input type="text" name="modal-name" id="modal-name" />
                         <br />
                       </div>
                       <div className="col">
@@ -210,25 +206,26 @@ function Cart(props) {
                 </div>
                 <div className="modal-footer d-flex justify-content-between">
                   <div>
-                    <h4 className="text-danger">Total : {cartTotal} {cartCurrency}</h4>
+                    <h4 className="text-danger">
+                      Total : {cartTotal} {cartCurrency}
+                    </h4>
                   </div>
                   <div className="modal-footer">
-
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    data-bs-dismiss="modal"
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      data-bs-dismiss="modal"
                     >
-                    Close
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    data-bs-dismiss="modal"
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-dismiss="modal"
                     >
-                    Proceed
-                  </button>
-                    </div>
+                      Proceed
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

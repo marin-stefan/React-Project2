@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
-import cartReducer from "../cart/CartReducer"
+import cartReducer from "../cart/CartReducer";
 import { userReducer } from "../user/UserReducer";
 import favoritesReducer from "../favorites/FavoritesReducer";
 import logger from "redux-logger";

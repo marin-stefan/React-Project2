@@ -22,25 +22,8 @@ function cartReducer(state = initialState, action) {
           ids: [...state.ids, action.payload.product.id],
           total: state.total + priceToAddToTotal,
         };
-        console.log("nu este");
         return newState;
       } else {
-        // for(let i in state.products){
-        //     if(state.products[i].id == action.payload.product.id){
-        //         console.log(state.products[i].id)
-        //         console.log(state.products[i].quantity)
-        //         let priceToAddToTotal = state.products[i].price
-        //         let newQuantity = state.products[i].quantity + 1
-        //         newState = {
-        //             ...state,
-        //             products: [...state.products[i].quantity = newQuantity],
-        //             total:(state.total+priceToAddToTotal * newQuantity)
-        //         };
-        //         return newState;
-        //     }
-        // }
-
-        console.log("exista");
         return state;
       }
 

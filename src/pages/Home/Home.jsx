@@ -18,10 +18,7 @@ class Home extends React.Component {
     this.setState({ categories, categoryNames });
   }
 
-  
-
   render() {
-      
     return (
       <div>
         <Layout>
@@ -35,7 +32,6 @@ class Home extends React.Component {
                     title={category.name}
                     description={category.description}
                     routeName={this.state.categoryNames[index]}
-                    
                   />
                 );
               })}

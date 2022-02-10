@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Layout from "../../components/Layout/Layout";
-
 import products from "../../utils/productsimgbb.json";
 import { connect } from "react-redux";
 import { addToCart } from "../../redux/cart/CartActions";
@@ -97,7 +96,7 @@ class Product extends Component {
                 <br />
                 <ul>
                   <li>
-                    <h3>{`Brand : ${ brand }`}</h3>
+                    <h3>{`Brand : ${brand}`}</h3>
                   </li>
                   <li>
                     <h3>{`Price : ${price} ${currency}`}</h3>

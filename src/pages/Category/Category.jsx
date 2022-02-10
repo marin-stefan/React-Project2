@@ -17,20 +17,26 @@ class Category extends Component {
     const { match } = this.props;
     const categoryName = match.params.categoryName;
     this.setState({ category: products[categoryName] });
-    this.formData()
+    this.formData();
   }
 
   formData() {
     const f100 = document.getElementById("filter100");
     const f1000 = document.getElementById("filter1000");
     const f10000 = document.getElementById("filter10000");
-    const values = [this.checkboxCheck(f100), this.checkboxCheck(f1000), this.checkboxCheck(f10000)];
-    const updatedValues = values.filter(elem => elem);
-    if (updatedValues.length>0){
-      this.setState({filter:updatedValues})
-    }else {
-      this.setState({filter:[]})
-      this.setState(prevState => ({ filter:[...prevState.filter,[1,9999]] }))
+    const values = [
+      this.checkboxCheck(f100),
+      this.checkboxCheck(f1000),
+      this.checkboxCheck(f10000),
+    ];
+    const updatedValues = values.filter((elem) => elem);
+    if (updatedValues.length > 0) {
+      this.setState({ filter: updatedValues });
+    } else {
+      this.setState({ filter: [] });
+      this.setState((prevState) => ({
+        filter: [...prevState.filter, [1, 9999]],
+      }));
     }
   }
 
@@ -65,8 +71,7 @@ class Category extends Component {
             <h2 className="text-warning">{this.state.category.name}</h2>
             <ProductList
               products={this.state.category.items}
-              
-              filter = {this.state.filter}
+              filter={this.state.filter}
             />
           </div>
         </div>

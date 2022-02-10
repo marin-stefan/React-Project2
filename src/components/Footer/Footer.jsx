@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
-// Pentru Home, About si majoritatea paginilor ce vor fi create in urmatoarele cursuri, avem nevoie de un header
-// si un footer.  Momentan, vom vrea ca footer-ul sa contina link catre pagin de About.
 function Footer() {
   return (
     <div className="container mb-3 d-flex justify-content-between bg-light border border-danger rounded shadow-lg footer-main flex-direction-column mt-3">
@@ -45,7 +43,7 @@ function Footer() {
           </a>
         </h5>
         <h5>
-          Theese are my &nbsp;
+          These are my &nbsp;
           <a
             className="text-decoration-none"
             target="_blank"

@@ -7,9 +7,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import { Provider } from "react-redux";
 import store from "./redux/store/store";
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,7 +17,6 @@ ReactDOM.render(
       <App />
     </Router>
   </Provider>,
-
   document.getElementById("root")
 );
 serviceWorker.unregister();

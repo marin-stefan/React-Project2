@@ -31,7 +31,7 @@ class Login extends React.Component {
               Register
             </Link>
           </div>
-          <br /> 
+          <br />
           <div>
             <button
               className="my-2 btn btn-light border shadow"
