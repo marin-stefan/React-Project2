@@ -42,7 +42,7 @@ The Navbar gives access to the Home page from any page.The Main section displays
 
 * Add Routing with React Router.
 
-* Add a CSS Framework (ex:Bootstrap).
+* Add a CSS Framework (ex: Bootstrap).
 
 * Style it your own , play with bootstrap add classes colors etc.
 
