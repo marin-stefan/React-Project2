@@ -28,7 +28,7 @@ function Favorites(props) {
                     <h6>{favoriteProduct.description}</h6>
                   </div>
                   <div className="w-25">
-                    <h5 className="text-center">
+                    <h5 className="text-center text-danger mt-4">
                       {favoriteProduct.price} {favoriteProduct.currency}
                     </h5>
                   </div>

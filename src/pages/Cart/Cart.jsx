@@ -46,7 +46,7 @@ function Cart(props) {
                     </div>
                   </div>
                   <div className="w-25 ">
-                    <h6 className="text-center ">
+                    <h6 className="text-center text-danger mt-4">
                       {cartProduct.price} {cartProduct.currency}
                     </h6>
                   </div>
@@ -93,7 +93,7 @@ function Cart(props) {
             );
           })}
           <div className="text-center">
-            <h4 className=" my-2">
+            <h4 className="my-2 text-danger">
               Total : {cartTotal} {cartCurrency}
             </h4>
             <button
@@ -210,7 +210,7 @@ function Cart(props) {
                 </div>
                 <div className="modal-footer d-flex justify-content-between">
                   <div>
-                    <h4>Total : {cartTotal} {cartCurrency}</h4>
+                    <h4 className="text-danger">Total : {cartTotal} {cartCurrency}</h4>
                   </div>
                   <div className="modal-footer">
 

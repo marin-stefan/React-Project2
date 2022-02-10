@@ -97,7 +97,7 @@ class Product extends Component {
                 <br />
                 <ul>
                   <li>
-                    <h3>{`Brand : ${brand}`}</h3>
+                    <h3>{`Brand : ${ brand }`}</h3>
                   </li>
                   <li>
                     <h3>{`Price : ${price} ${currency}`}</h3>
