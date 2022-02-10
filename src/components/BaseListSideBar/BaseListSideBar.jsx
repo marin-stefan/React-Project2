@@ -34,7 +34,7 @@ function BaseListSideBar(props) {
         </div>
         <br />
        <input 
-          className="btn btn-outline-dark mx-2"
+          className="btn btn-outline-dark mx-2 border-danger shadow"
           type="submit" 
           value="Filter"/>
       </form>

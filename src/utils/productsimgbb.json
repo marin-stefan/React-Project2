@@ -31,7 +31,7 @@
                 "colour": "White/Red/Blue",
                 "material": "Leather",
                 "brand": "Reebok",
-                "description": "The first shoe to have an internal inflation mechanism that regulated a unique fitting cushion in the lower and upper tongue to provide locking around the ankle."
+                "description": "The first shoe to have an internal inflation mechanism that locked around the ankle."
 	    },
             {
                 "id": 3,
@@ -47,7 +47,7 @@
                 "colour": "White/Black",
                 "material": "Leather",
                 "brand": "Reebok",
-                "description": "Reebok Shaqnosis White/Black edition as worn by, 'The Diesel', Shaquille O’Neal."
+                "description": "Reebok Shaqnosis White/Black edition as worn by, 'The Diesel', Shaquille O'Neal."
             },
             {
                 "id": 4,
@@ -67,7 +67,7 @@
 	    },
             {
                 "id": 5,
-                "name": "The Nike Uptemp Max Air Pippen",
+                "name": "The Nike Uptempo Max Air Pippen",
                 "price": 1299,
                 "currency": "LEI",
                 "imageMain": "https://i.ibb.co/jVg5b1T/nuap4.jpg",
@@ -100,7 +100,7 @@
         ],
         "image": "https://i.ibb.co/Q8TC2L3/sneakers.jpg",
         "name": "Sneakers",
-        "description": "The best from the best and nothing but the best"
+        "description": "The best of the best and nothing but the best"
     },
     "jersays": {
         "items": [
@@ -134,11 +134,11 @@
                 "colour": "Green/Red",
                 "material": "100% Polyester",
                 "brand": "Mitchell & Ness",
-                "description": "Gary payton No 20 from the Seattle Supersonics in Green or Red edition."
+                "description": "Gary Payton No 20 from the Seattle Supersonics in Green or Red edition."
             },
             {
                 "id": 9,
-                "name": "Los Angele Lakers 08",
+                "name": "Los Angeles Lakers 08",
                 "price": 665,
                 "currency": "LEI",
                 "imageMain": "https://i.ibb.co/BZjK6tw/kbll1.jpg",
@@ -257,7 +257,7 @@
             },
             {
                 "id": 16,
-                "name": "Miami Heat shorts",
+                "name": "Miami Heat Shorts",
                 "price": 340,
                 "currency": "LEI",
                 "imageMain": "https://i.ibb.co/gP7KFjb/mh1.jpg",
@@ -360,7 +360,7 @@
             },
             {
                 "id": 22,
-                "name": "Atlanta Hawks jacket",
+                "name": "Los Angeles Clippers jacket",
                 "price": 850,
                 "currency": "LEI",
                 "imageMain": "https://i.ibb.co/DkzhtsM/lacj1.jpg",
@@ -409,7 +409,7 @@
         ],
         "image": "https://i.ibb.co/GWkhW7c/jackets.jpg",
         "name": "Jackets",
-        "description": "Confortable, ready to wear"
+        "description": "Comfortable, ready to wear"
     },
     "shirts": {
         "items": [
@@ -431,7 +431,7 @@
             },
             {
                 "id": 26,
-                "name": "Lakers game t-shirt",
+                "name": "Los Angeles Lakers game t-shirt",
                 "price": 180,
                 "currency": "LEI",
                 "imageMain": "https://i.ibb.co/t8Ft225/lals1.jpg",
@@ -475,7 +475,7 @@
                 "colour": "Gray",
                 "material": "Cotton",
                 "brand": "New Era",
-                "description": "New Era Men's Basketball Tee from the Utah Jazz with team logo print in Gray"
+                "description": "New Era Men's Basketball t-shirt from the Utah Jazz with team logo print in Gray"
             },
             {
                 "id": 29,
@@ -491,7 +491,7 @@
                 "colour": "Black",
                 "material": "Cotton",
                 "brand": "New Era",
-                "description": "New Era Men's Basketball Tee from the Phoenix Suns with team logo print in Black"
+                "description": "New Era Men's Basketball t-shirt from the Phoenix Suns with team logo print in Black"
             },
             {
                 "id": 30,
@@ -518,7 +518,7 @@
         "items": [
             {
                 "id": 31,
-                "name": "Wilson Celtics basketball",
+                "name": "Wilson Boston Celtics basketball",
                 "price": 385,
                 "currency": "LEI",
                 "imageMain": "https://i.ibb.co/3h6TDgx/bcb1.jpg",
@@ -550,7 +550,7 @@
             },
 	    {
                 "id": 33,
-                "name": "Lakers FAN backpack",
+                "name": "Los Angeles Lakers FAN backpack",
                 "price": 385,
                 "currency": "LEI",
                 "imageMain": "https://i.ibb.co/WkDW7yK/lb1.jpg",
@@ -610,11 +610,11 @@
                 "colour": "Black/hite/Red",
                 "material": "Polyester/Cotton",
                 "brand": "Mitchell & Ness",
-                "description": "Cleveland cavaliers Fan Pack, Towel,Backpack,Hat."
+                "description": "Cleveland cavaliers Fan Pack, Towel, Backpack, Hat."
             }
         ],
         "image": "https://i.ibb.co/4FNL84D/accesories.jpg",
         "name": "Accesories",
-        "description": "Complete your style...in style"
+        "description": "Complete your style ...in style"
     }
 }

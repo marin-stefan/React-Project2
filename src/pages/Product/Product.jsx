@@ -62,47 +62,62 @@ class Product extends Component {
             <div className="d-flex justify-content-around">
               <div className="w-100 d-flex">
                 <div className="w-75">
-                  <img src={imageMain} alt="Product" className="" />
+                  <img src={imageMain} alt="Product" />
                 </div>
-                <div className="w-100 d-flex flex-column">
+                <div className="w-75 mr-5 d-flex flex-column">
                   <img
                     src={image1}
                     alt="Product"
-                    className="w-25  border"
+                    className="w-25  border  rounded"
                     onClick={() => this.updateMainImage(image1)}
                   />
                   <img
                     src={image2}
                     alt="Product2"
-                    className="w-25  border"
+                    className="w-25  border rounded"
                     onClick={() => this.updateMainImage(image2)}
                   />
                   <img
                     src={image3}
                     alt="Product3"
-                    className="w-25 h-25 border"
+                    className="w-25 h-25 border rounded"
                     onClick={() => this.updateMainImage(image3)}
                   />
                   <img
                     src={image4}
                     alt="Product4"
-                    className="w-25  border"
+                    className="w-25  border rounded"
                     onClick={() => this.updateMainImage(image4)}
                   />
                 </div>
               </div>
 
-              <div className="w-75">
+              <div className="w-100 py-4 px-5 ">
                 <h2>{name}</h2>
-                <h3>{`Brand : ${brand}`}</h3>
-                <h3>{`Price : ${price} ${currency}`}</h3>
-                <h3>{`Size : ${size}`}</h3>
-                <h3>{`Color : ${colour}`}</h3>
-                <h3>{`Material : ${material}`}</h3>
-                <h4>{`Description : ${description}`}</h4>
+                <br />
+                <ul>
+                  <li>
+                    <h3>{`Brand : ${brand}`}</h3>
+                  </li>
+                  <li>
+                    <h3>{`Price : ${price} ${currency}`}</h3>
+                  </li>
+                  <li>
+                    <h3>{`Size : ${size}`}</h3>
+                  </li>
+                  <li>
+                    <h3>{`Color : ${colour}`}</h3>
+                  </li>
+                  <li>
+                    <h3>{`Material : ${material}`}</h3>
+                  </li>
+                  <li>
+                    <h4>{`Description : ${description}`}</h4>
+                  </li>
+                </ul>
 
                 <button
-                  className="btn btn-dark mx-3"
+                  className="btn btn-outline-danger mx-3 border-primary"
                   onClick={() =>
                     addToCart({
                       product: {
@@ -111,15 +126,15 @@ class Product extends Component {
                         name,
                         price,
                         currency,
+                        description,
                       },
                     })
-                    
                   }
                 >
                   Add to cart
                 </button>
                 <button
-                  className="btn btn-dark mx-3"
+                  className="btn btn-outline-danger mx-3 border-primary"
                   onClick={() =>
                     addToFavorite({
                       product: {
@@ -128,6 +143,7 @@ class Product extends Component {
                         name,
                         price,
                         currency,
+                        description,
                       },
                     })
                   }

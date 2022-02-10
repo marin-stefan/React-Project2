@@ -4,6 +4,7 @@ const initialState = {
   products: [],
   ids: [],
   total: 0,
+  currency: "LEI",
 };
 
 function cartReducer(state = initialState, action) {

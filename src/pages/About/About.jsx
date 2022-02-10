@@ -1,28 +1,98 @@
-import React from 'react';
-import Layout from '../../components/Layout/Layout';
+import React from "react";
+import Layout from "../../components/Layout/Layout";
 
 function About() {
-    return(
+  return (
+    <div>
+      <Layout>
         <div>
-            <Layout>
-                <h1 className="text-center">Despre Noi</h1>
-                <br />
-                <h4 className="px-4">Lorem, ipsum dolor.</h4>
-                <h6 className="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officiis qui quasi iusto, sunt pariatur cupiditate deleniti eos. Nulla velit laboriosam quod debitis vero consectetur impedit omnis cum soluta voluptas quasi tenetur eum dolorum, nisi autem possimus cupiditate adipisci exercitationem ex optio. Architecto similique beatae aliquid et qui assumenda cumque, mollitia perspiciatis quis possimus est ipsum, impedit eveniet facere voluptates ratione commodi eum error laudantium alias. Impedit consequatur iure nihil blanditiis omnis quibusdam ut et non aperiam dolore eius ad ex quod distinctio quidem ea, quia labore enim dicta maiores?</h6>
-                <br />
-                <h4 className="px-4">Lorem, ipsum.</h4>
-                <h6 className="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque porro debitis quae aperiam laudantium eius eum obcaecati aliquid necessitatibus minus quam magni nesciunt sed omnis recusandae esse enim modi reprehenderit, veritatis deserunt voluptatibus! Earum adipisci facere consectetur doloremque impedit laborum dolore hic, nulla deserunt asperiores. Eaque tempore perspiciatis in assumenda, at voluptate dicta excepturi quis aspernatur voluptas harum, voluptates beatae odit deserunt neque corrupti accusantium nam nostrum possimus iste, ducimus debitis atque. Explicabo nesciunt rem deserunt error facere, atque quia, laudantium eligendi alias magni maxime dolorum quaerat qui voluptatum repellendus. Ipsam natus accusamus fugit possimus, dignissimos eos quam et inventore, itaque modi laboriosam! Aliquid minus sapiente numquam saepe ea similique necessitatibus quo minima nemo aspernatur ullam sed, earum at, repudiandae voluptate amet accusantium in possimus! Placeat neque ipsum exercitationem delectus.</h6>
-                <br />
-                <h4 className="px-4">Lorem ipsum dolor sit.</h4>
-                <h6 className="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem magni odio, possimus quia maxime sequi illo non impedit! Recusandae iusto qui cupiditate culpa facilis unde nostrum facere tempore eaque.</h6>
-                <br />
-                <h4 className="px-4">Lorem ipsum dolor sit amet consectetur.</h4>
-                <h6 className="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, mollitia. Nulla, praesentium exercitationem eius dolorum quod assumenda similique ea doloribus molestiae aut qui provident minima facere consequatur. Ab cum tempora labore est aspernatur numquam aliquam libero pariatur et? Reprehenderit quis vel quibusdam asperiores perferendis esse officiis quidem nostrum inventore, dolore quas alias fuga aliquam nisi neque reiciendis possimus aliquid tenetur animi. Blanditiis itaque ratione ex repudiandae quisquam ut at explicabo, officiis facere eaque provident commodi minus repellendus nihil impedit doloremque molestias libero temporibus. Sunt tenetur ab officiis, voluptatum fuga delectus impedit exercitationem neque dolor ratione praesentium repellat sit incidunt ipsum eos non. Libero reprehenderit quas cupiditate facere aut, asperiores nemo id possimus molestias quo tempore iusto saepe, rerum repellat culpa inventore sint maxime quam pariatur magni autem provident perspiciatis. Porro ea maxime cupiditate aperiam id modi magnam fuga. Vero maxime adipisci impedit deleniti quae nam repellat nulla magnam aspernatur voluptatibus voluptatum asperiores rem consectetur optio, quas dolore veniam fugiat incidunt! Doloribus sint in adipisci, at non porro accusantium temporibus nemo mollitia pariatur illo similique? Nemo ducimus reprehenderit voluptatem illo. Consequatur, illo ipsam porro doloremque et fugit quaerat sunt, modi id aliquid animi nihil sapiente consequuntur dolorem dolore nisi nulla, nemo eum esse saepe. Illo architecto odit dolor voluptate autem unde explicabo a id qui consequatur, blanditiis quasi recusandae quam tempore consectetur fuga ad, iure delectus at expedita molestias optio! Atque soluta ut sapiente perferendis sit vero eos nemo praesentium nisi.</h6>
-
-                <br />
-            </Layout>
+          <h1 className="text-center ">
+            E - commerce platform - React - Redux - Project 2
+          </h1>
+          <br />
         </div>
-    );
+        <div>
+          <ul>
+            <li>
+              <h5>
+                This is a larger project that covers the second half of the
+                course.
+              </h5>
+            </li>
+            <br />
+            <li>
+              <h5>It is a SPA e-commerce platform.</h5>
+            </li>
+            <br />
+            <li>
+              <h5>
+                It displays Header, NavBar, the Main section and a Footer.
+              </h5>
+            </li>
+            <br />
+            <li>
+              <h5>
+                The Header has a custom logo, a login section, a SVG and counter
+                with link to the favorites list and a SVG and counter with link
+                to the shopping cart. Also It displays the User's name once
+                logged in.
+              </h5>
+            </li>
+            <br />
+            <li>
+              <h5>The Navbar gives access to the Home page from any page.</h5>
+            </li>
+            <br />
+            <li>
+              <h5>
+                The Main section displays product categories , products and the
+                filter sidebar or details about one product, The Favorites list
+                or the Shopping Cart depending on the route.
+              </h5>
+            </li>
+            <br />
+            <li>
+              <h5>
+                Each product has four click-able images, a description and two
+                buttons for adding the product to The Favorites list or to The
+                Shopping Cart.
+              </h5>
+            </li>
+            <br />
+            <li>
+              <h5>
+                Once a product is added to The Shopping Cart or The Favorites
+                List it can be moved/added to either one using the buttons
+                implemented for each product item.
+              </h5>
+            </li>
+            <br />
+            <li>
+              <h5>
+                The Footer section displays info for the Project and the
+                developer.
+              </h5>
+            </li>
+            <br />
+            <li>
+              <h5>
+                For more information check out the Git Repository &nbsp;
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/marin-stefan/React-Project2.git"
+                >
+                  here
+                </a>
+                .
+              </h5>
+              <br />
+            </li>
+          </ul>
+        </div>
+      </Layout>
+    </div>
+  );
 }
 
 export default About;

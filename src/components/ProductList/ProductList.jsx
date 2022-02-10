@@ -20,6 +20,7 @@ function ProductList(props) {
                         price={product.price}
                         currency={product.currency}
                         image={product.image1}
+                        description={product.description}
                       />
                     ) : null;
                   })

@@ -10,23 +10,31 @@ function Favorites(props) {
   return (
     <div>
       <Layout>
-        <div className="container container-min-max-width bg-light py-5 my-5">
-          <h2>Favorites</h2>
+        <div className="container container-min-max-width bg-light py-3 my-3">
+          <h2 className="mx-3">Favorite Products</h2>
           {favoriteProducts.map((favoriteProduct, index) => {
             return (
               <div>
-                <div className="d-flex border m-3">
-                  <img src={favoriteProduct.image} alt="Product" className="thumbnail-image" />
-                  <p className="w-50">{favoriteProduct.name}</p>
-                  {/* <p>{index}</p>
-                  <p>/</p> */}
-                  <p className="w-50">
-                    {favoriteProduct.price} {favoriteProduct.currency}
-                  </p>
+                <div className="d-flex justify-content-between border m-3">
+                  <div className="w-25">
+                    <img
+                      src={favoriteProduct.image}
+                      alt="Product"
+                      className="thumbnail-image"
+                    />
+                  </div>
+                  <div className="w-50">
+                    <h5 className=" text-center ">{favoriteProduct.name}</h5>
+                    <h6>{favoriteProduct.description}</h6>
+                  </div>
+                  <div className="w-25">
+                    <h5 className="text-center">
+                      {favoriteProduct.price} {favoriteProduct.currency}
+                    </h5>
+                  </div>
 
-            
                   <button
-                    className="btn btn-dark mx-3"
+                    className="btn btn-outline-dark mx-3 my-1 border-danger"
                     onClick={() =>
                       addToCartInjected({
                         product: {
@@ -35,6 +43,7 @@ function Favorites(props) {
                           name: favoriteProduct.name,
                           price: favoriteProduct.price,
                           currency: favoriteProduct.currency,
+                          description: favoriteProduct.description,
                         },
                       })
                     }
@@ -43,7 +52,7 @@ function Favorites(props) {
                   </button>
 
                   <button
-                    className="btn btn-outline-dark"
+                    className="btn btn-outline-danger my-1 mx-3 border-warning"
                     onClick={() => {
                       removeFromFavoritesInjected({
                         product: {
@@ -52,7 +61,7 @@ function Favorites(props) {
                       });
                     }}
                   >
-                    X
+                    Remove
                   </button>
                 </div>
               </div>

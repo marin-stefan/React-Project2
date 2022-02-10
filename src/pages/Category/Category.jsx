@@ -62,7 +62,7 @@ class Category extends Component {
             />
           </div>
           <div className="container-fluid container-min-max-width border border-warning bg-light mx-1 rounded-3 shadow-lg">
-            <h2>{this.state.category.name}</h2>
+            <h2 className="text-warning">{this.state.category.name}</h2>
             <ProductList
               products={this.state.category.items}
               

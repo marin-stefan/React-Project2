@@ -9,12 +9,12 @@ function HomeCategory(props) {
         <div className="col-12 col-md-6 mb-4">
             <Link to={`/category/${routeName}`} className="text-decoration-none text-center text-warning" >
                 <img
-                    className="w-100" 
+                    className="w-100 border border-danger" 
                     src={image} 
                     alt="" 
                 />
                 <h2>{title}</h2>
-                <p>{description}</p>
+                <h5>{description}</h5>
             </Link>
         </div>
     )

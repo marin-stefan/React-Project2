@@ -11,32 +11,32 @@ function Header(props) {
   const { numberOfProducts,numberOfFavorites, user, logout } = props;
 
   return (
-    <header className="border-bottom mb-3">
+    <header className="border border-danger rounded mb-3 m-1 shadow">
       <div className="container-fluid container-min-max-width d-flex justify-content-between align-items-center">
-        <Link to="/" className="my-3">
+        <Link to="/" className="my-3 ">
           <img src={logo} alt="The 90's Shop" className="logo" />
         </Link>
         <div>
-          {user ? <p>Hello, {user.displayName}!</p> : null}
+          {user ? <h5>Hello, {user.displayName} !</h5> : null}
 
-          <div className="d-flex justify-content-end bg-light border m-3 px-4 py-2 rounded">
-            <Link to="/favorites" className="mx-2 d-flex">
-              <FavoritesTab className="" />
-              <p className="mx-1 mb-0">{numberOfFavorites}</p>
+          <div className="d-flex justify-content-end bg-light border border-warning shadow m-3 px-4 py-2 rounded">
+            <Link to="/favorites" className="mx-2 d-flex text-decoration-none fs-5 pt-2">
+              <FavoritesTab/>
+              <p className="mx-1 mb-0 pb-2">{numberOfFavorites}</p>
             </Link>
             {user ? (
-              <p className="logout h5" onClick={() => logout()}>
+              <p className="logout h5 text-decoration-none pt-2" onClick={() => logout()}>
                 Logout
               </p>
             ) : (
-              <Link to="/login" className="h5 mb-0 mx-2">
+              <Link to="/login" className="h5 mb-0 mx-2 my-2 text-decoration-none">
                 Login
               </Link>
             )}
             <div className="d-flex align-items-center">
-              <Link to="/cart" className=" mx-2 d-flex">
+              <Link to="/cart" className="mx-2 d-flex text-decoration-none fs-5 pt-2">
                 <ShoppingCart className="mx-1" />
-                <p className="mb-0">{numberOfProducts}</p>
+                <p className="mb-0 pb-2">{numberOfProducts}</p>
               </Link>
             </div>
           </div>
