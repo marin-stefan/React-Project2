@@ -15,17 +15,17 @@ function Cart(props) {
   return (
     <div>
       <Layout>
-        <div className="container container-min-max-width bg-light py-3 my-3">
+        <div className=" bg-light border shadow rounded p-3 m-1">
           <h2 className="mx-3">Shopping Cart</h2>
           {cartProducts.map((cartProduct, index) => {
             return (
               <div key={index}>
-                <div className="d-flex justify-content-around border m-3">
+                <div className="d-flex flex-wrap border-bottom border-dark m-3 p-1">
                   <div className="w-25">
                     <img
                       src={cartProduct.image}
                       alt="Product"
-                      className="thumbnail-image"
+                      className="img-fluid"
                     />
                   </div>
                   <div className="w-50">
@@ -37,57 +37,59 @@ function Cart(props) {
                       <h6>Quantity : {cartProduct.quantity} &nbsp;</h6>
                     </div>
                     <div>
-                      <button className="btn btn-outline-primary border-warning rounded m-1">
+                      <button className="btn btn-outline-primary border-warning rounded ">
                         -
                       </button>
-                      <button className="btn btn-outline-primary border-warning rounded m-1">
+                      <button className="btn btn-outline-primary border-warning rounded ">
                         +
                       </button>
                     </div>
                   </div>
-                  <div className="w-25 ">
-                    <h6 className="text-center text-danger mt-4">
+                  <div className="w-50 ">
+                    <h6 className="text-center text-danger mt-4 fs-3">
                       {cartProduct.price} {cartProduct.currency}
                     </h6>
                   </div>
 
-                  <button
-                    className="btn border-danger btn-outline-dark my-1 mx-3"
-                    onClick={() => {
-                      addToFavoriteInjected({
-                        product: {
-                          id: cartProduct.id,
-                          image: cartProduct.image,
-                          name: cartProduct.name,
-                          price: cartProduct.price,
-                          currency: cartProduct.currency,
-                          description: cartProduct.description,
-                        },
-                      });
+                  <div className="">
+                    <button
+                      className="btn btn-outline-dark border-danger mx-1"
+                      onClick={() => {
+                        addToFavoriteInjected({
+                          product: {
+                            id: cartProduct.id,
+                            image: cartProduct.image,
+                            name: cartProduct.name,
+                            price: cartProduct.price,
+                            currency: cartProduct.currency,
+                            description: cartProduct.description,
+                          },
+                        });
 
-                      removeFromCartInjected({
-                        product: {
-                          index,
-                          price: cartProduct.price,
-                        },
-                      });
-                    }}
-                  >
-                    Move to favorites
-                  </button>
-                  <button
-                    className="btn btn-outline-danger border-warning my-1 mx-3"
-                    onClick={() => {
-                      removeFromCartInjected({
-                        product: {
-                          index,
-                          price: cartProduct.price,
-                        },
-                      });
-                    }}
-                  >
-                    Remove
-                  </button>
+                        removeFromCartInjected({
+                          product: {
+                            index,
+                            price: cartProduct.price,
+                          },
+                        });
+                      }}
+                    >
+                      Move to favorites
+                    </button>
+                    <button
+                      className="btn btn-outline-danger border-primary mx-1"
+                      onClick={() => {
+                        removeFromCartInjected({
+                          product: {
+                            index,
+                            price: cartProduct.price,
+                          },
+                        });
+                      }}
+                    >
+                      Remove
+                    </button>
+                  </div>
                 </div>
               </div>
             );

@@ -10,17 +10,17 @@ function Favorites(props) {
   return (
     <div>
       <Layout>
-        <div className="container container-min-max-width bg-light py-3 my-3">
+        <div className="bg-light  shadow p-3 m-1">
           <h2 className="mx-3">Favorite Products</h2>
           {favoriteProducts.map((favoriteProduct, index) => {
             return (
               <div>
-                <div className="d-flex justify-content-between border m-3">
+                <div className="d-flex flex-wrap  m-3">
                   <div className="w-25">
                     <img
                       src={favoriteProduct.image}
                       alt="Product"
-                      className="thumbnail-image"
+                      className="img-fluid"
                     />
                   </div>
                   <div className="w-50">
@@ -32,9 +32,9 @@ function Favorites(props) {
                       {favoriteProduct.price} {favoriteProduct.currency}
                     </h5>
                   </div>
-
+                  <div className="d-flex w-100 justify-content-center py-2 border-bottom border-warning">
                   <button
-                    className="btn btn-outline-dark mx-3 my-1 border-danger"
+                    className="btn btn-outline-dark border-danger mx-1"
                     onClick={() =>
                       addToCartInjected({
                         product: {
@@ -52,7 +52,7 @@ function Favorites(props) {
                   </button>
 
                   <button
-                    className="btn btn-outline-danger my-1 mx-3 border-warning"
+                    className="btn btn-outline-danger mx-1 border-warning"
                     onClick={() => {
                       removeFromFavoritesInjected({
                         product: {
@@ -63,6 +63,7 @@ function Favorites(props) {
                   >
                     Remove
                   </button>
+                  </div>
                 </div>
               </div>
             );

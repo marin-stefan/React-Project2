@@ -57,99 +57,112 @@ class Product extends Component {
     return (
       <div>
         <Layout>
-          <div className="container-fluid container-min-max-width border border-warning bg-light mx-1 rounded-3 shadow-lg">
-            <div className="d-flex justify-content-around">
-              <div className="w-100 d-flex">
-                <div className="w-75">
-                  <img src={imageMain} alt="Product" />
-                </div>
-                <div className="w-75 mr-5 d-flex flex-column">
-                  <img
-                    src={image1}
-                    alt="Product"
-                    className="w-25  border  rounded"
-                    onClick={() => this.updateMainImage(image1)}
-                  />
-                  <img
-                    src={image2}
-                    alt="Product2"
-                    className="w-25  border rounded"
-                    onClick={() => this.updateMainImage(image2)}
-                  />
-                  <img
-                    src={image3}
-                    alt="Product3"
-                    className="w-25 h-25 border rounded"
-                    onClick={() => this.updateMainImage(image3)}
-                  />
-                  <img
-                    src={image4}
-                    alt="Product4"
-                    className="w-25  border rounded"
-                    onClick={() => this.updateMainImage(image4)}
-                  />
-                </div>
+          <div className=" m-1 p-2 product-box-main border border-primary rounded">
+            <div className="product-box-left">
+              <div className="">
+                <img
+                  src={imageMain}
+                  alt="Product"
+                  className="img-fluid py-2 my-1 mx-1 border border-danger rounded"
+                />
               </div>
-
-              <div className="w-100 py-4 px-5 ">
-                <h2>{name}</h2>
-                <br />
-                <ul>
-                  <li>
-                    <h3>{`Brand : ${brand}`}</h3>
-                  </li>
-                  <li>
-                    <h3>{`Price : ${price} ${currency}`}</h3>
-                  </li>
-                  <li>
-                    <h3>{`Size : ${size}`}</h3>
-                  </li>
-                  <li>
-                    <h3>{`Color : ${colour}`}</h3>
-                  </li>
-                  <li>
-                    <h3>{`Material : ${material}`}</h3>
-                  </li>
-                  <li>
-                    <h4>{`Description : ${description}`}</h4>
-                  </li>
-                </ul>
-
-                <button
-                  className="btn btn-outline-danger mx-3 border-primary"
-                  onClick={() =>
-                    addToCart({
-                      product: {
-                        image: image1,
-                        id,
-                        name,
-                        price,
-                        currency,
-                        description,
-                      },
-                    })
-                  }
-                >
-                  Add to cart
-                </button>
-                <button
-                  className="btn btn-outline-danger mx-3 border-primary"
-                  onClick={() =>
-                    addToFavorite({
-                      product: {
-                        image: image1,
-                        id,
-                        name,
-                        price,
-                        currency,
-                        description,
-                      },
-                    })
-                  }
-                >
-                  Add to favorites
-                </button>
+              <div className="thumb-img">
+                <img
+                  src={image1}
+                  alt="Product"
+                  className="product-one img-fluid border border-danger rounded my-1 mx-1"
+                  onClick={() => this.updateMainImage(image1)}
+                />
+                <img
+                  src={image2}
+                  alt="Product2"
+                  className="img-fluid border border-danger rounded my-1 mx-1"
+                  onClick={() => this.updateMainImage(image2)}
+                />
+                <img
+                  src={image3}
+                  alt="Product3"
+                  className="img-fluid border border-danger rounded my-1 mx-1"
+                  onClick={() => this.updateMainImage(image3)}
+                />
+                <img
+                  src={image4}
+                  alt="Product4"
+                  className="img-fluid border border-danger rounded my-1 mx-1"
+                  onClick={() => this.updateMainImage(image4)}
+                />
               </div>
+            </div>
+
+            <div className=" product-box-right">
+              <h2>{name}</h2>
+              <br />
+              <ul>
+                <li>
+                  <h4>
+                    Brand : <span className="fs-5">{brand}</span>
+                  </h4>
+                </li>
+                <li>
+                  <h4>
+                    Price : <span className="fs-4 text-danger">{price} {currency}</span>
+                  </h4>
+                </li>
+                <li>
+                  <h4>
+                    Size : <span className="fs-5">{size}</span>  
+                  </h4>
+                </li>
+                <li>
+                  <h4>
+                    Color : <span className="fs-5">{colour}</span>  
+                  </h4>
+                </li>
+                <li>
+                  <h4>
+                    Material : <span className="fs-5">EU {material}</span>  
+                  </h4>
+                </li>
+                <li>
+                  <h4>
+                    Description : <span className="fs-5">{description}</span></h4>
+                </li>
+              </ul>
+
+              <button
+                className="btn btn-outline-danger mx-3 border-primary"
+                onClick={() =>
+                  addToCart({
+                    product: {
+                      image: image1,
+                      id,
+                      name,
+                      price,
+                      currency,
+                      description,
+                    },
+                  })
+                }
+              >
+                Add to cart
+              </button>
+              <button
+                className="btn btn-outline-danger mx-3 border-primary"
+                onClick={() =>
+                  addToFavorite({
+                    product: {
+                      image: image1,
+                      id,
+                      name,
+                      price,
+                      currency,
+                      description,
+                    },
+                  })
+                }
+              >
+                Add to favorites
+              </button>
             </div>
           </div>
         </Layout>

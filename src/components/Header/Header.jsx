@@ -11,8 +11,8 @@ function Header(props) {
   const { numberOfProducts, numberOfFavorites, user, logout } = props;
 
   return (
-    <header className="border border-danger rounded mb-3 m-1 shadow">
-      <div className="container-fluid container-min-max-width d-flex justify-content-between align-items-center">
+    <header className="border border-primary rounded mb-3 m-1 shadow ">
+      <div className="container-fluid container-min-max-width d-flex flex-wrap justify-content-around align-items-center">
         <Link to="/" className="my-3 ">
           <img src={logo} alt="The 90's Shop" className="logo" />
         </Link>

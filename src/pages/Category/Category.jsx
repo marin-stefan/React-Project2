@@ -54,27 +54,32 @@ class Category extends Component {
       }
     }
   }
+  // border border-warning bg-light rounded-3 shadow-lg
 
   render() {
     return (
       <Layout>
-        <div className="d-flex">
-          <div className="border border-warning w-25 bg-light rounded-3 shadow-lg mx-1">
-            <BaseListSideBar
-              formData={(event) => {
-                event.preventDefault();
-                this.formData();
-              }}
-            />
-          </div>
-          <div className="container-fluid container-min-max-width border border-warning bg-light mx-1 rounded-3 shadow-lg">
-            <h2 className="text-warning">{this.state.category.name}</h2>
-            <ProductList
-              products={this.state.category.items}
-              filter={this.state.filter}
-            />
-          </div>
+        <div className="container-fluid d-flex flex-wrap justify-content-between flex-direction-column bg-light">
+          
+            <div className=""> 
+              <BaseListSideBar
+                formData={(event) => {
+                  event.preventDefault();
+                  this.formData();
+                }}
+              />
+            </div>
+          
+            <div> 
+              <h2 className="text-warning text-center">{this.state.category.name}</h2>
+              <ProductList
+                products={this.state.category.items}
+                filter={this.state.filter}
+              />
+            </div>
+
         </div>
+
       </Layout>
     );
   }
