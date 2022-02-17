@@ -22,7 +22,7 @@ class Home extends React.Component {
     return (
       <div>
         <Layout>
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               {this.state.categories.map((category, index) => {
                 return (
