@@ -7,7 +7,7 @@ function Layout(props) {
   return (
     <div>
       <Header />
-      <div className="bg-light border mb-3 mx-1 my-1 p-1 shadow-lg border-danger rounded  ">
+      <div className="container bg-light border my-3 shadow-lg border-danger rounded  ">
         <Link to="/" className="mx-2 fs-4 text-warning text-decoration-none">
           Home
         </Link>

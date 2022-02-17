@@ -59,7 +59,7 @@ class Category extends Component {
   render() {
     return (
       <Layout>
-        <div className="container-fluid d-flex flex-wrap justify-content-between flex-direction-column bg-light">
+        <div className="container d-flex flex-wrap justify-content-between flex-direction-column bg-light">
           
             <div className=""> 
               <BaseListSideBar

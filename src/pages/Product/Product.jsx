@@ -57,38 +57,38 @@ class Product extends Component {
     return (
       <div>
         <Layout>
-          <div className=" m-1 p-2 product-box-main border border-primary rounded">
+          <div className="  product-box-main  container rounded">
             <div className="product-box-left">
               <div className="">
                 <img
                   src={imageMain}
                   alt="Product"
-                  className="img-fluid py-2 my-1 mx-1 border border-danger rounded"
+                  className="img-fluid py-2 my-1  border-bottom border-danger"
                 />
               </div>
               <div className="thumb-img">
                 <img
                   src={image1}
                   alt="Product"
-                  className="product-one img-fluid border border-danger rounded my-1 mx-1"
+                  className="product-one img-fluid border-bottom border-danger my-1 "
                   onClick={() => this.updateMainImage(image1)}
                 />
                 <img
                   src={image2}
                   alt="Product2"
-                  className="img-fluid border border-danger rounded my-1 mx-1"
+                  className="img-fluid  border-bottom border-danger my-1 "
                   onClick={() => this.updateMainImage(image2)}
                 />
                 <img
                   src={image3}
                   alt="Product3"
-                  className="img-fluid border border-danger rounded my-1 mx-1"
+                  className="img-fluid border-bottom border-danger my-1 "
                   onClick={() => this.updateMainImage(image3)}
                 />
                 <img
                   src={image4}
                   alt="Product4"
-                  className="img-fluid border border-danger rounded my-1 mx-1"
+                  className="img-fluid border-bottom border-danger my-1"
                   onClick={() => this.updateMainImage(image4)}
                 />
               </div>
