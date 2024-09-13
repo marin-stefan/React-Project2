@@ -2,11 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loginUserG, loginUserF } from "../../redux/user/UserActions";
+import { withRouter } from "../../components/withRouter";
 
 class Login extends React.Component {
   componentDidUpdate(prevProps) {
+    console.log(this.props)
     if (this.props.userData !== prevProps.userData) {
-      this.props.history.push("/");
+      this.props.router.navigate("/");
     }
   }
 
@@ -71,4 +73,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Login));

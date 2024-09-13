@@ -3,6 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import ProductList from "../../components/ProductList/ProductList";
 import BaseListSideBar from "../../components/BaseListSideBar/BaseListSideBar";
 import products from "../../utils/productsimgbb.json";
+import { withRouter } from "../../components/withRouter";
 
 class Category extends Component {
   constructor(props) {
@@ -14,8 +15,7 @@ class Category extends Component {
   }
 
   componentDidMount() {
-    const { match } = this.props;
-    const categoryName = match.params.categoryName;
+    const categoryName = this.props.router.params.categoryName;
     this.setState({ category: products[categoryName] });
     this.formData();
   }
@@ -85,4 +85,4 @@ class Category extends Component {
   }
 }
 
-export default Category;
+export default withRouter(Category);

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Login from "./pages/Login/Login";
@@ -20,17 +20,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Switch>
-          <Route path="/Login" component={Login} />
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/category/:categoryName" component={Category} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/favorites" component={Favorites} />
-          <Route path="/product/:productId" component={Product} />
-          <Route path="/register" component={Register} />
-          <Route path="/*" component={Page404} />
-        </Switch>
+        <Routes>
+          <Route path="/Login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/category/:categoryName" element={<Category />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/product/:productId" element={<Product />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/*" element={<Page404 />} />
+        </Routes>
       </div>
     );
   }

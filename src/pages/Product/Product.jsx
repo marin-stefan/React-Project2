@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { addToCart } from "../../redux/cart/CartActions";
 import { addToFavorites } from "../../redux/favorites/FavoritesActions";
 import "../../pages/Product/Product.css";
+import { withRouter } from "../../components/withRouter";
 
 class Product extends Component {
   constructor() {
@@ -14,7 +15,7 @@ class Product extends Component {
     };
   }
   componentDidMount() {
-    const productIdUrl = this.props.match.params.productId;
+    const productIdUrl = this.props.router.params.productId;
     const categoryValues = Object.values(products);
     let currentProduct;
     categoryValues.forEach((category) => {
@@ -177,4 +178,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(null, mapDispatchToProps)(Product);
+export default connect(null, mapDispatchToProps)(withRouter(Product));
